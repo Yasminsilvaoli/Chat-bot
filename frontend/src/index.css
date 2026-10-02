@@ -728,3 +728,59 @@ html, body {
     height: 38px;
   }
 }
+
+/* ==========================================================================
+   11. Fundo Animado Ultra Leve e Econômico (GPU Accelerated)
+   - Zero consumo de CPU / JS
+   - Apenas opacidade e transform3d compostos na GPU
+   - Economia total de bateria em smartphones e notebooks
+   ========================================================================== */
+.ambient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-dot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-name: ambientFloat;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ambientFloat {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(18px, -24px, 0);
+    opacity: 0.45;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(-12px, 16px, 0);
+    opacity: 0;
+  }
+}
+
+/* Respeita preferências de redução de movimento e bateria */
+@media (prefers-reduced-motion: reduce) {
+  .ambient-dot {
+    animation: none;
+    opacity: 0.3;
+  }
+}

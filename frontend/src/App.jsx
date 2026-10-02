@@ -13,6 +13,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import ChatWindow from './components/ChatWindow';
+import AmbientBackground from './components/AmbientBackground';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
@@ -53,9 +54,12 @@ export default function App() {
   }, []);
 
   return (
-    <div className="app-root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="app-root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative' }}>
+      {/* Fundo animado econômico acelerado por GPU */}
+      <AmbientBackground />
+
       <Header isApiOnline={isApiOnline} />
-      <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1 }}>
         <ChatWindow />
       </main>
     </div>
