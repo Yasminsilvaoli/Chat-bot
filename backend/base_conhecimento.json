@@ -1,0 +1,79 @@
+{
+  "empresa": "Alaency",
+  "descricao": "A Alaency é uma boutique e loja de moda feminina contemporânea que celebra a elegância, autenticidade e autoconfiança de cada mulher. Desenvolvemos coleções autorais com tecidos de alta qualidade, alfaiataria moderna, vestidos fluidos e peças casuais sofisticadas pensadas para valorizar todos os corpos e acompanhar diferentes momentos — do ambiente profissional a eventos especiais. Com tecnologia inteligente e Inteligência Artificial integrada ao atendimento, a Alaency oferece uma experiência de compra prática, consultoria de estilo personalizada e suporte acolhedor 24 horas por dia.",
+  "topicos": [
+    {
+      "id": "guia_medidas_tamanhos",
+      "perguntas_chave": [
+        "Como saber meu tamanho ideal na Alaency?",
+        "Qual tamanho de vestido ou calça devo escolher?",
+        "Vocês têm tabela de medidas?",
+        "A modelagem da Alaency é padrão?",
+        "Como funciona o provador virtual?"
+      ],
+      "resposta": "✨ **Encontre seu Caimento Perfeito na Alaency!** 👗\n\nNossas peças são desenhadas com corte refinado e modelagem que abraça a silhueta com total conforto:\n\n* 📏 **Guia de Medidas:** Em cada produto, clique em *\"Tabela de Medidas\"* para comparar busto, cintura, quadril e comprimento em centímetros.\n* 🪄 **Provador Inteligente com IA:** Me conte sua altura, peso e formato de corpo que eu recomendo a numeração perfeita para você!\n* 💡 **Dica de Estilo:** Para vestidos de festa e camisas de seda, recomendamos escolher a numeração exata do seu busto. Para calças de alfaiataria com elastano, a modelagem veste fielmente ao tamanho habitual.\n\nPrecisa de ajuda com uma peça específica do nosso catálogo? Me envie o nome ou foto do modelo! 💖"
+    },
+    {
+      "id": "trocas_devolucoes",
+      "perguntas_chave": [
+        "Como solicitar uma troca?",
+        "Qual o prazo para troca ou devolução?",
+        "A primeira troca é gratuita?",
+        "Posso devolver uma peça se não vestir bem?",
+        "Como funciona o reembolso?"
+      ],
+      "resposta": "🔄 **Política de Trocas e Devoluções Alaency** 🛍️\n\nQueremos que você se sinta deslumbrante em cada look! Se precisar trocar ou devolver, nosso processo é rápido e sem burocracia:\n\n* 🎁 **Primeira Troca Grátis:** O frete da primeira troca por pedido é por nossa conta via código de postagem reversa dos Correios.\n* 🗓️ **Prazos:** Até **7 dias corridos** após a entrega para devolução com estorno total, ou até **30 dias corridos** para troca por outro tamanho ou modelo.\n* 🏷️ **Condições:** A peça deve estar impecável, sem indícios de uso, lavagem ou alterações, com a etiqueta e o lacre inviolado da Alaency.\n* ⚡ **Solicitação Simples:** Faça login no site em *\"Minha Conta > Trocas\"* ou informe o número do seu pedido aqui no chat que iniciamos agora mesmo!\n\nSeu estorno ou crédito para novas compras é liberado em até 48h úteis após a conferência! ✨"
+    },
+    {
+      "id": "formas_pagamento_envio",
+      "perguntas_chave": [
+        "Quais as formas de pagamento aceitas?",
+        "Quais são os planos e preços?",
+        "Tem frete grátis?",
+        "Vocês parcelam sem juros?",
+        "Quanto tempo demora para chegar meu pedido?",
+        "Tem desconto no pagamento à vista?"
+      ],
+      "resposta": "💳 **Pagamento Seguro & Entrega Expressa Alaency** 🚚\n\nOferecemos condições especiais e logística cuidadosa para você receber seu pedido com carinho:\n\n* 💰 **Formas de Pagamento:**\n  * ⚡ **PIX:** Com **5% de desconto** imediato e liberação instantânea do pedido!\n  * 💳 **Cartão de Crédito:** Em até **6x sem juros** (ou em até 12x com tarifas reduzidas).\n  * 📄 **Boleto Bancário:** Compensação bancária em até 48 horas úteis.\n* 📦 **Política de Frete:**\n  * 🌟 **Frete Grátis:** Para compras acima de **R$ 299,00** para todo o Brasil!\n  * 🚀 **Prazos e Modalidades:** Sedex, Jadlog e Entrega Expressa no mesmo dia para capitais selecionadas. Simule direto na sacola digitando seu CEP!\n\nCada look é embalado em papel de seda com aroma exclusivo Alaency! 🎀"
+    },
+    {
+      "id": "consultoria_estilo_ia",
+      "perguntas_chave": [
+        "Vocês ajudam a montar looks femininos?",
+        "Qual roupa usar em um casamento de dia?",
+        "O que vestir para uma entrevista ou reunião importante?",
+        "Como montar um guarda-roupa inteligente com peças versáteis?",
+        "Como funciona a consultoria de estilo com IA?"
+      ],
+      "resposta": "🪄 **Consultoria de Estilo Exclusiva com IA da Alaency** ✨\n\nAqui, cada combinação é pensada para expressar sua essência e sofisticação:\n\n* 👠 **Looks para Ocasiões Especiais:** Casamentos, jantares, formaturas ou eventos diurnos — montamos sugestões completas com vestidos, acessórios e sobreposições.\n* 💼 **Elegância Profissional & Alfaiataria:** Conjuntos de blazer e calça pantalona, camisas em crepe e peças de caimento impecável.\n* 👗 **Cápsula Inteligente:** Como combinar 5 peças da Alaency para criar mais de 15 propostas de looks diferentes.\n\nQuer uma recomendação personalizada agora? **Me conte qual é a ocasião e as cores que você mais ama!** Adorarei sugerir composições perfeitas! 🌟"
+    },
+    {
+      "id": "rastreamento_pedidos",
+      "perguntas_chave": [
+        "Onde está meu pedido Alaency?",
+        "Como rastrear o envio da minha encomenda?",
+        "Qual o código de rastreamento?",
+        "Meu pedido já foi despachado?",
+        "Como acompanhar a entrega?"
+      ],
+      "resposta": "📍 **Acompanhe seu Pedido Alaency em Tempo Real!** 🛵\n\nSabemos o quanto você está ansiosa para vestir seu novo look! Veja como acompanhar:\n\n* 📲 **Notificações Automáticas:** Assim que o pedido é despachado, enviamos o código de rastreamento com link direto por WhatsApp e e-mail cadastrado.\n* 🔍 **Rastreamento no Chat:** Digite o **número do seu pedido** (ex: #AL9876) ou seu CPF aqui mesmo que localizo o status imediatamente!\n* 📦 **Área da Cliente:** Acesse nosso site, vá em *\"Meus Pedidos > Rastrear\"* para visualizar cada etapa do transporte.\n\nSe houver qualquer imprevisto com a transportadora, cuidamos de tudo com prioridade! 🌸"
+    },
+    {
+      "id": "sobre_alaency",
+      "perguntas_chave": [
+        "O que é a Alaency?",
+        "Quem é a fundadora e qual a proposta da marca?",
+        "A loja Alaency é confiável?",
+        "Como faço a integração com React e Python?",
+        "Qual o horário de atendimento e contatos?"
+      ],
+      "resposta": "🌟 **Bem-vinda ao Universo Alaency: Moda que Empodera!** 👑\n\nA **Alaency** nasceu da paixão pelo design atemporal, feminilidade moderna e alta qualidade. Criamos peças que unem sofisticação e conforto para mulheres protagonistas de suas histórias.\n\n* 🧵 **Qualidade & Sustentabilidade:** Fibras selecionadas, acabamentos de alta costura e produção com responsabilidade social.\n* 💻 **Tecnologia & IA Full-Stack:** Nossa experiência digital é potencializada por inteligência artificial e uma moderna arquitetura conectando **Python (FastAPI)** e **React**, proporcionando um atendimento veloz, humanizado e interativo com suporte a voz!\n* 🔒 **Segurança Certificada:** Plataforma 100% segura, com criptografia SSL e selo de excelência em satisfação das clientes.\n* 🕒 **Atendimento com Amor:** Segunda a sexta das 09h às 19h via WhatsApp e e-mail (`atendimento@alaency.com.br`), além da nossa IA sempre pronta para você! ✨"
+    }
+  ],
+  "faq_rapido": [
+    "Como saber o meu tamanho ideal na Alaency?",
+    "Como funciona a política de trocas e devoluções?",
+    "Qual o prazo de entrega e como rastrear meu pedido?",
+    "Vocês montam looks personalizados com Inteligência Artificial?"
+  ]
+}
