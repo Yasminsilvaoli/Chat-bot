@@ -1,55 +1,61 @@
 /* ==========================================================================
-   Projeto: 01 — Chatbot de Suporte Full-Stack (AfesuTech / DIZZIE)
+   Projeto: 01 — Chatbot de Suporte Full-Stack (AfesuTech / Alaency)
    Camada: Camada 4 — Interface & Design System
    Arquivo: frontend/src/index.css
    
-   Design System: Tema Escuro (Dark Mode), Glassmorphism & Microinterações
+   Identidade Visual: Luxo, Moda e Sofisticação
+   Paleta Exclusiva: Rosa (Principal), Verde-Esmeralda (Secundário),
+                     Dourado (Detalhes) e Branco/Tons Claros (Leitura)
    ========================================================================== */
 
-/* 1. Variáveis CSS Globais e Paleta de Cores (Marca Alaency: Rosa, Verde Esmeralda e Dourado) */
+/* 1. Variáveis CSS Globais (Tema Claro Sofisticado & Paleta Exclusiva) */
 :root {
-  /* Fundo e Superfícies Nobres */
-  --bg-primary: #0a0c0b;
-  --bg-secondary: #121614;
-  --bg-card: rgba(18, 23, 20, 0.78);
-  --bg-card-hover: rgba(26, 33, 29, 0.88);
-  --bg-glass: rgba(16, 21, 18, 0.70);
-  --bg-glass-heavy: rgba(12, 16, 14, 0.90);
+  /* Tons Claros & Superfícies Peroladas */
+  --bg-primary: #faf6f8;
+  --bg-secondary: #f4edf1;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-card-hover: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.88);
+  --bg-glass-heavy: rgba(255, 255, 255, 0.96);
 
-  /* Acentos Principais: Rosa Rosé, Verde Esmeralda e Ouro Champagne */
-  --accent-primary: #f43f5e;        /* Rosa Rosé Vibrante */
-  --accent-secondary: #10b981;      /* Verde Esmeralda */
-  --accent-gold: #f59e0b;           /* Dourado Nobre */
+  /* Rosa (Cor Principal - Ações, Destaques e Balão Usuário) */
+  --accent-pink: #e11d48;
+  --accent-pink-soft: #f43f5e;
+  --accent-pink-light: #fff1f2;
+  --accent-pink-glow: rgba(225, 29, 72, 0.20);
+  --pink-gradient: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%);
+  --pink-gradient-hover: linear-gradient(135deg, #be123c 0%, #e11d48 100%);
 
-  /* Degradês de Luxo */
-  --accent-gradient: linear-gradient(135deg, #f43f5e 0%, #f59e0b 55%, #10b981 100%);
-  --accent-gradient-hover: linear-gradient(135deg, #e11d48 0%, #d97706 55%, #059669 100%);
-  --accent-glow: rgba(244, 63, 94, 0.40);
-  --accent-gold-glow: rgba(245, 158, 11, 0.35);
-  --accent-emerald-glow: rgba(16, 185, 129, 0.35);
+  /* Verde-Esmeralda (Cor Secundária - Respostas do Atendimento & Status) */
+  --accent-emerald: #059669;
+  --accent-emerald-soft: #10b981;
+  --accent-emerald-light: #ecfdf5;
+  --accent-emerald-border: rgba(5, 150, 105, 0.25);
+  --accent-emerald-glow: rgba(5, 150, 105, 0.18);
+
+  /* Dourado (Detalhes, Bordas Nobres, Ícones & Brilhos) */
+  --accent-gold: #d97706;
+  --accent-gold-soft: #f59e0b;
+  --accent-gold-light: #fef3c7;
+  --accent-gold-border: rgba(217, 119, 6, 0.30);
+  --accent-gold-glow: rgba(245, 158, 11, 0.22);
 
   /* Balões de Mensagem */
-  --user-bubble-bg: linear-gradient(135deg, #e11d48 0%, #be185d 100%);
+  --user-bubble-bg: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%);
   --user-bubble-text: #ffffff;
-  --bot-bubble-bg: rgba(20, 27, 23, 0.88);
-  --bot-bubble-border: rgba(245, 158, 11, 0.22);
-  --bot-bubble-text: #f1f5f9;
+  --bot-bubble-bg: #f2fbf6;
+  --bot-bubble-border: rgba(5, 150, 105, 0.22);
+  --bot-bubble-text: #1e293b;
 
-  /* Bordas Translúcidas e Efeitos Luminescentes */
-  --border-subtle: rgba(255, 255, 255, 0.09);
-  --border-active: rgba(245, 158, 11, 0.50);    /* Brilho Dourado */
-  --border-glow: rgba(16, 185, 129, 0.40);      /* Toque Esmeralda */
+  /* Bordas Delicadas */
+  --border-subtle: rgba(225, 29, 72, 0.08);
+  --border-active: rgba(217, 119, 6, 0.40);
+  --border-emerald: rgba(5, 150, 105, 0.35);
 
-  /* Texto */
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
+  /* Texto com Máxima Nitidez */
+  --text-main: #1e293b;
+  --text-muted: #475569;
   --text-dim: #64748b;
-
-  /* Status e Alertas */
-  --status-online: #10b981;                      /* Esmeralda */
-  --status-offline: #f43f5e;                     /* Rosa Rubro */
-  --status-warning: #f59e0b;                     /* Dourado */
-  --recording-pulse: #f43f5e;
 
   /* Tipografia */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -57,14 +63,14 @@
   /* Raios de Borda */
   --radius-sm: 8px;
   --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-lg: 22px;
   --radius-full: 9999px;
 
   /* Sombras e Iluminação */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.50);
-  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.42);
-  --shadow-glow: 0 0 22px rgba(244, 63, 94, 0.30);
+  --shadow-sm: 0 2px 10px rgba(225, 29, 72, 0.05);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 12px 40px rgba(225, 29, 72, 0.07);
+  --shadow-pink: 0 4px 18px rgba(225, 29, 72, 0.28);
 }
 
 /* Reset e Base */
@@ -79,16 +85,15 @@ html, body {
   height: 100%;
   background-color: var(--bg-primary);
   background-image: 
-    radial-gradient(at 10% 10%, rgba(244, 63, 94, 0.12) 0px, transparent 50%),
-    radial-gradient(at 90% 90%, rgba(16, 185, 129, 0.10) 0px, transparent 50%),
-    radial-gradient(at 50% 15%, rgba(245, 158, 11, 0.08) 0px, transparent 60%),
-    radial-gradient(at 50% 50%, rgba(10, 12, 11, 0.85) 0px, transparent 100%);
+    radial-gradient(at 10% 12%, rgba(225, 29, 72, 0.04) 0px, transparent 50%),
+    radial-gradient(at 90% 88%, rgba(5, 150, 105, 0.04) 0px, transparent 50%),
+    radial-gradient(at 50% 20%, rgba(245, 158, 11, 0.035) 0px, transparent 60%);
   background-attachment: fixed;
   color: var(--text-main);
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
+  line-height: 1.55;
   overflow-x: hidden;
 }
 
@@ -98,7 +103,7 @@ html, body {
   flex-direction: column;
 }
 
-/* 2. Barra de Rolagem Customizada */
+/* Barra de Rolagem Customizada Sofisticada */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -109,15 +114,15 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(225, 29, 72, 0.15);
   border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(225, 29, 72, 0.35);
 }
 
-/* 3. Cabeçalho Institucional & Indicador de Status */
+/* 2. Cabeçalho Institucional Sofisticado */
 .app-header {
   position: sticky;
   top: 0;
@@ -125,12 +130,12 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
+  padding: 14px 28px;
   background: var(--bg-glass-heavy);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(225, 29, 72, 0.09);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
 }
 
 .brand-wrapper {
@@ -140,55 +145,59 @@ html, body {
 }
 
 .brand-logo-badge {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-md);
-  background: var(--accent-gradient);
+  background: var(--pink-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-weight: 700;
-  font-size: 1.2rem;
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .brand-info h1 {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.01em;
+  color: var(--accent-pink);
 }
 
 .brand-info p {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
 }
 
+.brand-info p span {
+  color: var(--accent-emerald);
+  font-weight: 500;
+}
+
+/* Indicador de Status com Verde-Esmeralda */
 .status-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  background: var(--accent-emerald-light);
+  border: 1px solid var(--accent-emerald-border);
   font-size: 0.82rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .status-dot {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   position: relative;
 }
 
 .status-dot.online {
-  background-color: var(--status-online);
-  box-shadow: 0 0 10px var(--status-online);
+  background-color: var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-emerald);
 }
 
 .status-dot.online::after {
@@ -196,30 +205,30 @@ html, body {
   position: absolute;
   top: -2px;
   left: -2px;
-  width: 13px;
-  height: 13px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: var(--status-online);
-  opacity: 0.5;
-  animation: pulse-ring 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  background-color: var(--accent-emerald);
+  opacity: 0.4;
+  animation: pulse-ring 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
 }
 
 .status-dot.offline {
-  background-color: var(--status-offline);
-  box-shadow: 0 0 10px var(--status-offline);
+  background-color: var(--accent-pink);
+  box-shadow: 0 0 8px var(--accent-pink);
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(0.8); opacity: 0.7; }
+  0% { transform: scale(0.8); opacity: 0.6; }
   50% { transform: scale(1.6); opacity: 0; }
   100% { transform: scale(1.6); opacity: 0; }
 }
 
-/* 4. Estrutura Principal da Janela do Chat */
+/* 3. Estrutura da Janela do Chat */
 .chat-container {
-  max-width: 950px;
+  max-width: 920px;
   width: 100%;
-  margin: 20px auto;
+  margin: 18px auto;
   padding: 0 16px;
   flex: 1;
   display: flex;
@@ -232,22 +241,23 @@ html, body {
   height: calc(100vh - 120px);
   min-height: 560px;
   background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(225, 29, 72, 0.08);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-glass);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
+  position: relative;
 }
 
-/* Barra Superior de Métricas */
+/* Barra de Métricas no Topo */
 .metrics-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 18px;
-  background: rgba(10, 10, 15, 0.5);
-  border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(225, 29, 72, 0.07);
   font-size: 0.82rem;
   color: var(--text-muted);
 }
@@ -255,7 +265,7 @@ html, body {
 .metrics-group {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
@@ -266,7 +276,8 @@ html, body {
 }
 
 .metric-pill strong {
-  color: var(--text-main);
+  color: var(--accent-pink);
+  font-weight: 600;
 }
 
 .export-btn {
@@ -275,18 +286,20 @@ html, body {
   gap: 6px;
   padding: 5px 12px;
   font-size: 0.78rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-muted);
+  font-weight: 500;
+  background: #ffffff;
+  border: 1px solid var(--accent-gold-border);
+  color: var(--accent-gold);
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(217, 119, 6, 0.08);
 }
 
 .export-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-main);
-  border-color: var(--border-active);
+  background: var(--accent-gold-light);
+  border-color: var(--accent-gold);
+  transform: translateY(-1px);
 }
 
 /* Área de Mensagens */
@@ -299,7 +312,183 @@ html, body {
   gap: 18px;
 }
 
-/* 5. Balões de Conversa Distintos */
+/* ==========================================================================
+   4. Abertura do Chat & Área de Boas-Vindas Elegante com Respiração
+   ========================================================================== */
+.welcome-container {
+  position: relative;
+  margin: 8px 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: welcomeSlideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Luz suave atrás que pulsa como uma respiração */
+.welcome-breathing-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.12) 0%, rgba(245, 158, 11, 0.08) 45%, rgba(5, 150, 105, 0.06) 70%, transparent 100%);
+  border-radius: 50%;
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: 0;
+  animation: breathingGlow 5.5s ease-in-out infinite;
+}
+
+@keyframes breathingGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.55;
+  }
+}
+
+/* Pequenos pontos luminosos discretos ao redor da área de boas-vindas */
+.welcome-sparkle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkleFade 4s ease-in-out infinite;
+}
+
+.welcome-sparkle-1 {
+  top: -10px;
+  left: 12%;
+  width: 4px;
+  height: 4px;
+  background-color: var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold);
+  animation-delay: 0s;
+}
+
+.welcome-sparkle-2 {
+  top: 15%;
+  right: 8%;
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent-pink-soft);
+  box-shadow: 0 0 12px var(--accent-pink-soft);
+  animation-delay: 1.5s;
+}
+
+.welcome-sparkle-3 {
+  bottom: 0px;
+  left: 20%;
+  width: 4px;
+  height: 4px;
+  background-color: var(--accent-emerald);
+  box-shadow: 0 0 10px var(--accent-emerald);
+  animation-delay: 2.2s;
+}
+
+.welcome-sparkle-4 {
+  bottom: 12%;
+  right: 18%;
+  width: 3px;
+  height: 3px;
+  background-color: var(--accent-gold);
+  box-shadow: 0 0 8px var(--accent-gold);
+  animation-delay: 3s;
+}
+
+@keyframes sparkleFade {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.85; transform: scale(1.1); }
+}
+
+/* Card central de boas-vindas */
+.welcome-card {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--accent-gold-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  box-shadow: 0 10px 30px rgba(225, 29, 72, 0.06), 0 2px 8px rgba(217, 119, 6, 0.08);
+}
+
+.welcome-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  animation: itemFade 0.6s ease-out 0.15s both;
+}
+
+.welcome-header h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-pink);
+}
+
+/* Animação gradual dos parágrafos da mensagem de boas-vindas */
+.welcome-text-1 {
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 10px;
+  animation: itemFade 0.6s ease-out 0.3s both;
+}
+
+.welcome-text-2 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent-emerald);
+  animation: itemFade 0.6s ease-out 0.45s both;
+}
+
+.welcome-cta {
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: itemFade 0.6s ease-out 0.6s both;
+}
+
+@keyframes welcomeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes itemFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   5. Balões de Conversa
+   ========================================================================== */
 .message-row {
   display: flex;
   gap: 12px;
@@ -327,14 +516,16 @@ html, body {
 }
 
 .avatar.bot {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2));
-  border: 1px solid var(--border-active);
-  color: var(--accent-secondary);
+  background: var(--accent-emerald-light);
+  border: 1px solid var(--accent-emerald-border);
+  color: var(--accent-emerald);
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.15);
 }
 
 .avatar.user {
-  background: var(--user-bubble-bg);
+  background: var(--pink-gradient);
   color: #fff;
+  box-shadow: 0 2px 6px rgba(225, 29, 72, 0.25);
 }
 
 .message-bubble {
@@ -346,19 +537,22 @@ html, body {
   word-break: break-word;
 }
 
+/* Balão do Usuário: Rosa vibrante com texto branco */
 .message-row.user .message-bubble {
   background: var(--user-bubble-bg);
   color: var(--user-bubble-text);
   border-bottom-right-radius: 4px;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  box-shadow: var(--shadow-pink);
 }
 
+/* Balão do Atendimento (IA): Verde-Esmeralda elegante com borda e leitura nítida */
 .message-row.bot .message-bubble {
   background: var(--bot-bubble-bg);
   color: var(--bot-bubble-text);
   border: 1px solid var(--bot-bubble-border);
+  border-left: 3px solid var(--accent-emerald);
   border-bottom-left-radius: 4px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .message-meta {
@@ -368,25 +562,31 @@ html, body {
   gap: 12px;
   margin-top: 8px;
   padding-top: 6px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   font-size: 0.75rem;
   color: var(--text-dim);
 }
 
+.message-row.user .message-meta {
+  border-top-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .source-tag {
-  text-transform: uppercase;
   font-size: 0.68rem;
-  letter-spacing: 0.05em;
-  padding: 2px 6px;
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(5, 150, 105, 0.12);
+  color: var(--accent-emerald);
+  font-weight: 600;
 }
 
 /* Feedback Like / Dislike */
 .feedback-actions {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 
 .feedback-btn {
@@ -394,7 +594,7 @@ html, body {
   border: none;
   color: var(--text-dim);
   cursor: pointer;
-  padding: 3px 5px;
+  padding: 3px 6px;
   border-radius: 4px;
   transition: all 0.2s ease;
   display: inline-flex;
@@ -402,26 +602,28 @@ html, body {
 }
 
 .feedback-btn:hover {
-  color: var(--text-main);
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent-pink);
+  background: rgba(225, 29, 72, 0.06);
 }
 
 .feedback-btn.active.like {
-  color: var(--status-online);
+  color: var(--accent-emerald);
+  background: var(--accent-emerald-light);
 }
 
 .feedback-btn.active.dislike {
-  color: var(--status-offline);
+  color: var(--accent-pink);
+  background: var(--accent-pink-light);
 }
 
-/* Indicador de Digitação (Typing Indicator) */
+/* Indicador de Digitação */
 .typing-indicator {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 10px 14px;
-  background: var(--bot-bubble-bg);
-  border: 1px solid var(--bot-bubble-border);
+  gap: 6px;
+  padding: 10px 16px;
+  background: var(--accent-emerald-light);
+  border: 1px solid var(--accent-emerald-border);
   border-radius: var(--radius-md);
   align-self: flex-start;
 }
@@ -429,58 +631,64 @@ html, body {
 .typing-dot {
   width: 6px;
   height: 6px;
-  background-color: var(--accent-secondary);
+  background-color: var(--accent-emerald);
   border-radius: 50%;
   animation: typingBounce 1.4s infinite ease-in-out both;
 }
 
-.typing-dot:nth-child(1) { animation-delay: -0.32s; }
-.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+.typing-dot:nth-child(2) { animation-delay: 0.16s; }
+.typing-dot:nth-child(3) { animation-delay: 0.32s; }
 
 @keyframes typingBounce {
-  0%, 80%, 100% { transform: scale(0); opacity: 0.4; }
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
   40% { transform: scale(1); opacity: 1; }
 }
 
-/* 6. Chips de Perguntas Rápidas (Suggested Actions) */
+/* ==========================================================================
+   6. Chips de Perguntas Rápidas
+   ========================================================================== */
 .chips-container {
   display: flex;
   align-items: center;
   gap: 8px;
   overflow-x: auto;
-  padding: 10px 18px;
-  background: rgba(15, 17, 24, 0.6);
-  border-top: 1px solid var(--border-subtle);
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(225, 29, 72, 0.07);
 }
 
 .chip-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 14px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  padding: 7px 15px;
+  background: #ffffff;
+  border: 1px solid var(--accent-gold-border);
   border-radius: var(--radius-full);
   color: var(--text-muted);
   font-size: 0.82rem;
+  font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
 .chip-btn:hover {
-  background: rgba(59, 130, 246, 0.12);
-  border-color: var(--accent-primary);
-  color: #fff;
+  background: var(--accent-pink-light);
+  border-color: var(--accent-pink);
+  color: var(--accent-pink);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.15);
 }
 
-/* 7. Barra Inferior de Entrada (Input, Voz e Enviar) */
+/* ==========================================================================
+   7. Barra Inferior de Entrada (Input, Voz e Envio em Rosa)
+   ========================================================================== */
 .chat-input-area {
-  padding: 16px 18px;
+  padding: 14px 20px;
   background: var(--bg-glass-heavy);
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(225, 29, 72, 0.08);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -495,27 +703,27 @@ html, body {
 
 .chat-input {
   width: 100%;
-  padding: 12px 18px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1px solid rgba(225, 29, 72, 0.15);
   border-radius: var(--radius-full);
   color: var(--text-main);
   font-size: 0.95rem;
   outline: none;
   transition: all 0.25s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
 }
 
 .chat-input:focus {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
 }
 
 .chat-input::placeholder {
   color: var(--text-dim);
 }
 
-/* 8. Botão de Microfone e Animação de Gravação */
+/* Botão de Microfone */
 .mic-btn {
   width: 44px;
   height: 44px;
@@ -523,9 +731,9 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-muted);
+  background: var(--accent-pink-light);
+  border: 1px solid rgba(225, 29, 72, 0.2);
+  color: var(--accent-pink);
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
@@ -533,9 +741,9 @@ html, body {
 }
 
 .mic-btn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--text-main);
-  border-color: var(--border-active);
+  background: rgba(225, 29, 72, 0.15);
+  border-color: var(--accent-pink);
+  transform: scale(1.04);
 }
 
 .mic-btn:disabled {
@@ -543,25 +751,25 @@ html, body {
   cursor: not-allowed;
 }
 
-/* Gravação Ativa com Efeito Pulso Vermelho */
+/* Gravação Ativa */
 .mic-btn.recording {
-  background: var(--recording-pulse);
-  border-color: var(--recording-pulse);
+  background: var(--accent-pink);
+  border-color: var(--accent-pink);
   color: #fff;
   animation: recordingPulse 1.2s infinite;
 }
 
 @keyframes recordingPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.4);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(239, 68, 68, 0);
+    box-shadow: 0 0 0 10px rgba(225, 29, 72, 0);
     transform: scale(1.06);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
     transform: scale(1);
   }
 }
@@ -571,19 +779,19 @@ html, body {
   bottom: 56px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(239, 68, 68, 0.95);
+  background: var(--accent-pink);
   color: #fff;
   font-size: 0.78rem;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: var(--radius-full);
   white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
   pointer-events: none;
   animation: fadeIn 0.2s ease-out;
 }
 
-/* Botão Enviar Mensagem */
+/* Botão Enviar Mensagem (Rosa com Ícone Branco) */
 .send-btn {
   width: 44px;
   height: 44px;
@@ -591,19 +799,19 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-gradient);
+  background: var(--pink-gradient);
   border: none;
   color: #fff;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  box-shadow: var(--shadow-pink);
   flex-shrink: 0;
 }
 
 .send-btn:hover:not(:disabled) {
-  background: var(--accent-gradient-hover);
+  background: var(--pink-gradient-hover);
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
 }
 
 .send-btn:disabled {
@@ -613,7 +821,9 @@ html, body {
   box-shadow: none;
 }
 
-/* 9. Formatação Rica de Conteúdo Markdown no Balão da IA */
+/* ==========================================================================
+   8. Formatação Markdown no Balão do Atendimento
+   ========================================================================== */
 .markdown-content p {
   margin-bottom: 8px;
 }
@@ -631,109 +841,36 @@ html, body {
 }
 
 .markdown-content strong {
-  color: #fff;
+  color: #064e3b;
   font-weight: 600;
 }
 
 .markdown-content em {
-  color: var(--accent-secondary);
+  color: var(--accent-pink);
 }
 
 .markdown-content a {
-  color: var(--accent-secondary);
+  color: var(--accent-pink);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .markdown-content code {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(5, 150, 105, 0.08);
+  color: #064e3b;
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.88em;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--accent-emerald-border);
 }
 
-/* Animações Gerais */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 10. Responsividade para Smartphones e Tablets */
-@media (max-width: 768px) {
-  .app-header {
-    padding: 10px 16px;
-  }
-
-  .brand-logo-badge {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-  }
-
-  .brand-info h1 {
-    font-size: 1rem;
-  }
-
-  .brand-info p {
-    font-size: 0.72rem;
-  }
-
-  .status-badge {
-    padding: 4px 10px;
-    font-size: 0.75rem;
-  }
-
-  .chat-container {
-    margin: 8px auto;
-    padding: 0 8px;
-  }
-
-  .chat-card {
-    height: calc(100vh - 80px);
-    border-radius: var(--radius-md);
-  }
-
-  .metrics-bar {
-    padding: 8px 12px;
-    font-size: 0.75rem;
-  }
-
-  .messages-viewport {
-    padding: 14px 12px;
-    gap: 14px;
-  }
-
-  .message-row {
-    max-width: 92%;
-  }
-
-  .message-bubble {
-    padding: 10px 14px;
-    font-size: 0.88rem;
-  }
-
-  .chat-input-area {
-    padding: 10px 12px;
-    gap: 8px;
-  }
-
-  .chat-input {
-    padding: 10px 14px;
-    font-size: 0.88rem;
-  }
-
-  .mic-btn, .send-btn {
-    width: 38px;
-    height: 38px;
-  }
-}
-
 /* ==========================================================================
-   11. Fundo Animado Ultra Leve e Econômico (GPU Accelerated)
-   - Zero consumo de CPU / JS
-   - Apenas opacidade e transform3d compostos na GPU
-   - Economia total de bateria em smartphones e notebooks
+   9. Fundo Animado Claro & Econômico (GPU)
    ========================================================================== */
 .ambient-background {
   position: fixed;
@@ -761,26 +898,94 @@ html, body {
     transform: translate3d(0, 0, 0);
     opacity: 0;
   }
-  25% {
-    opacity: 0.8;
+  30% {
+    opacity: 0.65;
   }
   50% {
-    transform: translate3d(18px, -24px, 0);
-    opacity: 0.45;
+    transform: translate3d(16px, -20px, 0);
+    opacity: 0.40;
   }
   75% {
-    opacity: 0.75;
+    opacity: 0.60;
   }
   100% {
-    transform: translate3d(-12px, 16px, 0);
+    transform: translate3d(-10px, 14px, 0);
     opacity: 0;
   }
 }
 
-/* Respeita preferências de redução de movimento e bateria */
 @media (prefers-reduced-motion: reduce) {
-  .ambient-dot {
-    animation: none;
-    opacity: 0.3;
+  .ambient-dot, .welcome-breathing-glow, .welcome-sparkle {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   10. Responsividade Mobile
+   ========================================================================== */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 10px 16px;
+  }
+
+  .brand-logo-badge {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-info h1 {
+    font-size: 1rem;
+  }
+
+  .brand-info p {
+    font-size: 0.72rem;
+  }
+
+  .chat-container {
+    margin: 6px auto;
+    padding: 0 8px;
+  }
+
+  .chat-card {
+    height: calc(100vh - 75px);
+    border-radius: var(--radius-md);
+  }
+
+  .welcome-card {
+    padding: 18px 18px;
+  }
+
+  .welcome-breathing-glow {
+    width: 240px;
+    height: 160px;
+  }
+
+  .messages-viewport {
+    padding: 14px 12px;
+    gap: 14px;
+  }
+
+  .message-row {
+    max-width: 92%;
+  }
+
+  .message-bubble {
+    padding: 10px 14px;
+    font-size: 0.88rem;
+  }
+
+  .chat-input-area {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .chat-input {
+    padding: 10px 14px;
+    font-size: 0.88rem;
+  }
+
+  .mic-btn, .send-btn {
+    width: 40px;
+    height: 40px;
   }
 }

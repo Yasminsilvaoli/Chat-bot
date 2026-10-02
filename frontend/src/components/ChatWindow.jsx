@@ -48,12 +48,13 @@ export default function ChatWindow() {
   // Identificador de sessão único para manter histórico multi-turn no backend
   const [sessionId] = useState(() => 'sess_' + Math.random().toString(36).substring(2, 9));
 
-  // Estado do histórico de mensagens inicializado via função pura
+  // Estado do histórico de mensagens inicializado via função pura com a abertura elegante
   const [messages, setMessages] = useState(() => [
     {
       id: 'welcome_1',
       sender: 'bot',
-      text: 'Olá! Seja muito bem-vinda à **Alaency**! ✨👗\n\nEu sou sua consultora virtual de moda e atendimento inteligente. Como posso te encantar hoje?\n\nVocê pode me perguntar sobre nosso guia de tamanhos, coleções exclusivas, prazos de entrega ou selecionar um dos atalhos abaixo! 💖',
+      isWelcome: true,
+      text: "👋 Olá! Seja bem-vindo(a) ao nosso atendimento!\n\nEstamos aqui para ajudar você a encontrar o que precisa. 💗\n\nVocê pode tirar dúvidas sobre produtos, tamanhos, pedidos, pagamentos, entregas, trocas e devoluções.\n\n✨ Como podemos ajudar?",
       timestamp: 1727888400000,
       source: 'greeting',
       confidence: 1.0,
@@ -312,7 +313,8 @@ export default function ChatWindow() {
         {
           id: createMessageId('welcome'),
           sender: 'bot',
-          text: 'Atendimento reiniciado! Como posso te ajudar agora? 👗✨',
+          isWelcome: true,
+          text: "👋 Olá! Seja bem-vindo(a) ao nosso atendimento!\n\nEstamos aqui para ajudar você a encontrar o que precisa. 💗\n\nVocê pode tirar dúvidas sobre produtos, tamanhos, pedidos, pagamentos, entregas, trocas e devoluções.\n\n✨ Como podemos ajudar?",
           timestamp: getCurrentTimestamp(),
           source: 'greeting',
           confidence: 1.0,
@@ -330,17 +332,17 @@ export default function ChatWindow() {
         <div className="metrics-bar">
           <div className="metrics-group">
             <span className="metric-pill" title="Total de mensagens trocadas na sessão">
-              <BarChart3 size={15} style={{ color: 'var(--accent-secondary)' }} />
+              <BarChart3 size={15} style={{ color: 'var(--accent-pink)' }} />
               <span>Mensagens: <strong>{metrics.total_messages}</strong></span>
             </span>
 
             <span className="metric-pill" title="Taxa calculada de satisfação dos clientes">
-              <Sparkles size={15} style={{ color: 'var(--status-online)' }} />
+              <Sparkles size={15} style={{ color: 'var(--accent-emerald)' }} />
               <span>Satisfação: <strong>{metrics.satisfaction_rate}%</strong></span>
             </span>
 
             <span className="metric-pill" title="Modo operacional atual da IA">
-              <Clock size={15} style={{ color: 'var(--accent-primary)' }} />
+              <Clock size={15} style={{ color: 'var(--accent-gold)' }} />
               <span>Modo: <strong>{metrics.current_mode}</strong></span>
             </span>
           </div>
@@ -371,6 +373,44 @@ export default function ChatWindow() {
         {/* 2. Área de Mensagens (Viewport com scroll suave) */}
         <div className="messages-viewport">
           {messages.map((msg) => {
+            // Renderização especial da Abertura de Boas-Vindas com Respiração e Pontos Luminosos
+            if (msg.isWelcome) {
+              return (
+                <div key={msg.id} className="welcome-container">
+                  {/* Luz suave atrás que pulsa lentamente como respiração */}
+                  <div className="welcome-breathing-glow" />
+
+                  {/* Pequenos pontos luminosos discretos ao redor */}
+                  <span className="welcome-sparkle welcome-sparkle-1" />
+                  <span className="welcome-sparkle welcome-sparkle-2" />
+                  <span className="welcome-sparkle welcome-sparkle-3" />
+                  <span className="welcome-sparkle welcome-sparkle-4" />
+
+                  {/* Card de Boas-Vindas com animações graduais */}
+                  <div className="welcome-card">
+                    <div className="welcome-header">
+                      <div className="avatar bot">
+                        <Sparkles size={18} />
+                      </div>
+                      <h2>👋 Olá! Seja bem-vindo(a) ao nosso atendimento!</h2>
+                    </div>
+
+                    <p className="welcome-text-1">
+                      Estamos aqui para ajudar você a encontrar o que precisa. 💗
+                    </p>
+
+                    <p className="welcome-text-2">
+                      Você pode tirar dúvidas sobre produtos, tamanhos, pedidos, pagamentos, entregas, trocas e devoluções.
+                    </p>
+
+                    <div className="welcome-cta">
+                      <span>✨ Como podemos ajudar?</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
             const isUser = msg.sender === 'user';
             const formattedTime = new Date(msg.timestamp).toLocaleTimeString('pt-BR', {
               hour: '2-digit',

@@ -31,12 +31,12 @@ export default function Header({ isApiOnline = false }) {
       </div>
 
       {/* Indicador Visual de Conectividade com a API FastAPI */}
-      <div className="status-badge" title={isApiOnline ? 'Backend FastAPI conectado' : 'Backend FastAPI desconectado'}>
+      <div className="status-badge" title={isApiOnline ? 'Atendimento Alaency Conectado' : 'Atendimento Offline'}>
         <span className={`status-dot ${isApiOnline ? 'online' : 'offline'}`} />
-        <span style={{ color: isApiOnline ? 'var(--status-online)' : 'var(--status-offline)' }}>
-          {isApiOnline ? 'API Online' : 'API Offline'}
+        <span style={{ color: isApiOnline ? 'var(--accent-emerald)' : 'var(--accent-pink)' }}>
+          {isApiOnline ? 'Atendimento Online' : 'Atendimento Offline'}
         </span>
-        <Radio size={14} style={{ opacity: 0.6 }} />
+        <Radio size={14} style={{ color: isApiOnline ? 'var(--accent-emerald)' : 'var(--accent-pink)', opacity: 0.8 }} />
       </div>
     </header>
   );
